@@ -101,17 +101,17 @@ public class Fraction implements Comparable<Fraction>{
         this.b = sum.b;
     }
 
-    public Fraction subtr(Fraction fraction) {
+    public Fraction subtraction(Fraction fraction) {
         int a = this.a * fraction.b - this.b * fraction.a;
         int b = this.b * fraction.b;
         return new Fraction(a, b);
     }
 
-    public Fraction subtr(int i) {
+    public Fraction subtraction(int i) {
         return new Fraction(this.a - this.b * i, this.b);
     }
 
-    public double subtr(double i) {
+    public double subtraction(double i) {
         return (double) this.a / this.b - i;
     }
 
@@ -139,7 +139,7 @@ public class Fraction implements Comparable<Fraction>{
 
     @Override
     public int compareTo(Fraction o) {
-        Fraction result = this.subtr(o);
+        Fraction result = this.subtraction(o);
         return result.a;
 
     }
@@ -209,6 +209,6 @@ public class Fraction implements Comparable<Fraction>{
             return -1;
         else if (o2 == null)
             return 1;
-        return o1.subtr(o2).a;
+        return o1.subtraction(o2).a;
     }
 }
