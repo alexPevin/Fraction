@@ -115,6 +115,10 @@ public class Fraction implements Comparable<Fraction>{
         return (double) this.a / this.b - i;
     }
 
+    public String string() {
+        return null;
+    }
+
     public Fraction multiplication(Fraction fraction) {
         int a = this.a * fraction.a;
         int b = this.b * fraction.b;
